@@ -3,10 +3,9 @@
 if (!requireNamespace("readxl", quietly = TRUE)) {
   install.packages("readxl", repos = "https://cloud.r-project.org")
 }
+url_datos <- paste0("https://raw.githubusercontent.com/",
+                    "cmetaute/Articulo_Regresion/main/datos.xlsx")
 
-archivo <- "datos.xlsx"
-if (!file.exists(archivo)) archivo <- file.path("Articulo_regresion", "datos.xlsx")
-if (!file.exists(archivo)) archivo <- file.choose()
 
 
 datos <- readxl::read_excel(archivo, sheet = 1, col_names = FALSE)
