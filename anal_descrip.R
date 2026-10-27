@@ -17,21 +17,13 @@ datos <- na.omit(datos)
 
 
 cat("\nANALISIS DESCRIPTIVO DEL LULO\n")
-cat("\nCantidad de registros y variables:\n")
 print(dim(datos))
-cat("\nPrimeros registros:\n")
 print(head(datos))
-cat("\nResumen estadistico:\n")
 print(summary(datos))
-cat("\nDesviacion estandar:\n")
 print(sapply(datos, sd))
-cat("\nVarianza:\n")
 print(sapply(datos, var))
-cat("\nPromedio de SST por dosis:\n")
 print(aggregate(sst ~ dosis, data = datos, mean))
-cat("\nPromedio de SST por dia:\n")
 print(aggregate(sst ~ dias, data = datos, mean))
-cat("\nCorrelacion entre las variables:\n")
 print(cor(datos))
 
 
