@@ -3,7 +3,7 @@ if (!requireNamespace("readxl", quietly = TRUE)) {
   install.packages("readxl", repos = "https://cloud.r-project.org")
 }
 
-archivo <- "Datos Regresion.xlsx"
+archivo <- "DatosRegresion.xlsx"
 if (!file.exists(archivo)) {
   stop("No encuentro datos.xlsx. Abre RStudio con la carpeta del repositorio como directorio de trabajo.")
 }
