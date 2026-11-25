@@ -1,19 +1,3 @@
-# =============================================================================
-#  Modelo lineal - Solidos solubles totales (SST) del lulo
-#  Molano-Diaz, Reyes-Medina y Alvarez-Herrera (2022). Biotecnologia en el
-#  Sector Agropecuario y Agroindustrial, 20(2), 60-75. Cuadro 2 (SST).
-#
-#  Y  = SST (°Brix)
-#  X1 = dias despues de cosecha (ddc)
-#  X2 = dosis de 1-MCP (µg/L)
-#
-#  El articulo no reporta una ecuacion de regresion: usa un ANOVA factorial
-#  con prueba de Duncan sobre las mediciones individuales, que no estan
-#  publicadas. Con los 15 promedios del Cuadro 2 se ajusta el modelo lineal
-#  sst = b0 + b1*dias + b2*dosis + e
-# =============================================================================
-
-
 paquetes  <- c("readxl", "ggplot2")
 faltantes <- paquetes[!paquetes %in% rownames(installed.packages())]
 if (length(faltantes) > 0) install.packages(faltantes, repos = "https://cloud.r-project.org")
